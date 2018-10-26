@@ -1,0 +1,205 @@
+*{
+				margin-top: 0px;
+			}
+			
+			#all{
+				position: relative;
+				width: 1350px;
+				height: 900px;
+				
+			}
+			#cat{
+				
+				width:141px;
+				height:50px;
+				margin-left: 130px;
+				margin-top: 30px;
+				
+			}
+			#success{
+				
+				margin-left: 310px;
+				margin-top: -40px;
+			}
+			
+			#duiHao{
+				float: left;
+				margin-left: 490px;
+				margin-top: 140px;
+			}
+			#phoneNumber{
+				color: orange;
+			}
+			#center{
+				position: relative;
+				top:160px;
+				left:30px;
+			}
+			#jump>a{
+				
+				font-size:12px;
+				text-decoration: none;
+			}
+			#jump>span{
+				color: gray;
+				font-size:12px;
+				
+			}
+			#jump{
+				position: relative;
+				top:175px;
+				right: 40px;
+				
+			}
+			#imgCenter{
+				position: relative;
+				top:220px;
+				right: 120px;
+				
+			}
+			.bottom1{
+			
+				font-size:13px;
+				
+			}
+			#longString{
+				height: 13px;
+				width: 1px;
+				border-left:1px gray solid ;
+				position: relative;
+				left:410px ;
+				top:343px;
+			}
+			#bottom1{
+				position: relative;
+				right:650px ;
+				top:400px;
+			}
+			#bottom2{
+				position: relative;
+				left:155px ;
+				top:330px;
+			}
+			#copyright{
+				position: relative;
+				margin: 0px auto;
+				width: 1000px;
+				height: 180px;
+				
+				position: absolute;
+				bottom: 0px;
+				left: 170px;
+				font: 12px/22px Arial,"Microsoft YaHei";
+			}
+			#copyright ul{								
+				width: 580px;
+				
+			}
+			#copyright li{
+				list-style: none;
+				
+				float: left;
+				padding-right: 13px;
+								
+			}
+			#copyright li a{
+				color: black;
+				text-decoration: none;
+				
+			}
+			#copyright a:hover{
+				color: red;
+				text-decoration: none;
+				
+			}
+			#copyright p{
+				clear: both;
+				color: gray;
+				margin: 0px;
+				padding-left: 40px;
+			}
+			
+			#oredit{
+				margin-top: 10px;
+				width: 960px;
+				border-top: 1px solid gray;
+				position: absolute;
+				right: 0px;
+				font:12px/18px;
+				color: gray;
+			}
+			#oredit>a{
+				
+				text-decoration: none;
+				color: gray;
+				
+			}
+			
+			#oredit i{
+				display:block;
+				float: left;
+				position: absolute;
+				top: 15px;
+				
+				width: 35px;
+				height: 35px;
+			}
+			#oredit b{
+				display:block;
+				float: left;
+				width: 65px;
+				height: 35px;
+				position: absolute;
+				top: 15px;
+				
+			}
+			#baxx i{
+				background: url(../img/1.5.png);
+			}
+			#baxx b{
+				left: 35px;
+			}
+			#xypj i{
+				background: url(../img/1.6.png);
+				left:140px;
+			}
+			#xypj b{
+				width: 55px;
+				left: 180px;
+			}
+			#cxwz i{
+				background: url(../img/1.7.png);
+				left:280px;
+			}
+			#cxwz b{
+				left:320px;
+				top:22px;
+			}
+			#wljc i{
+				background: url(../img/1.8.png);
+				left:420px;
+			}
+			#wljc b{
+				width: 55px;
+				left: 460px;
+			}
+			#wgdjp i{
+				background: url(../img/1.9.png);
+				left:560px;
+			}
+			#wgdjp b{
+				
+				left: 600px;
+			}
+			#gbhgh{
+				width: 100px;
+				height: 35px;
+				position: absolute;
+				top: 15px;
+				right: 0px;
+				background: url(../img/2.0.png);
+			}
+			#body{
+				width: 1350px;
+				margin: 0 auto;
+			}

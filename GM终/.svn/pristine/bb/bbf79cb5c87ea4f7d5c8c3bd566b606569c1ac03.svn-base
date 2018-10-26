@@ -1,0 +1,673 @@
+<%@page import="com.service.inter.UserService"%>
+<%@page import="com.service.impl.UserServiceImpl"%>
+<%@page import="com.vo.User"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<base href="<%=basePath%>">
+		<meta charset="UTF-8">
+		<title>注册页面</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jQuery-confirm/jquery-confirm.css"/>
+		<script type="text/javascript" src = "js/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src = "js/javascriptregister.js"></script>
+		<style type="text/css">
+			*{
+				margin: 0px;
+			}
+			#all{
+				position: relative;
+				width:990px;
+				height: 820px;
+				margin: 0px auto;
+				/*background-color: red;*/
+			}
+			#top{
+				padding: 30px 0px;
+			}
+			#main{
+				
+				
+			}
+			#form-top>p{
+				position: relative;
+			    left:830px;
+			    font:13px "微软雅黑" ;
+			    color: #a5a5a5;
+			}
+			a{
+				text-decoration: none;
+			}
+			#form-list{
+				height: 594px;
+				background:url(img/formlist.gif) no-repeat ;
+				background-position:top right;
+				background-origin:border-box ;
+				padding-top:40px ;
+				border: 1px solid #ccc;
+				position: relative;
+			}
+			#form-list div.same{
+				padding-bottom: 26px;
+				height: 38px;
+				position: relative;
+			}
+			/*文本框前div*/
+			.reg-lable{
+				width:151px;
+				height: 38px;
+				line-height: 38px;
+				text-align: right;
+				color: #a5a5a5;
+				font-size: 14px;
+				float: left;
+			}
+			/*文本框*/
+			.i-text{
+				width: 288px;
+				height: 36px;
+				font: 14px/36px Arial,"Simsun";
+				color: #a5a5a5;
+    			padding: 0 4px;
+   				vertical-align: middle;
+   				
+			}
+			.inputDiv{
+				float: left;
+			}
+			/*文本框后提示信息*/
+			.hint{
+				margin-left:3px ;
+				padding-left: 2px;
+				height: 36px;
+				line-height: 38px;
+				font: 12px/36px Arial,"Simsun";
+				color: #a5a5a5;
+				border: 1px solid  #ccc;
+				float: left;
+				background-color: #ffffff;
+			}
+			/*写短信验证码的div*/
+			#writeMsg{
+				margin: 0px;
+				float: left;
+				width: 130px;
+				height: 36px;
+				font: 14px/36px Arial,"Simsun";
+				color: #a5a5a5;
+    			padding: 0 4px;
+   				vertical-align: middle;
+			}
+			/*得到短信验证码的div*/
+			#getMsg{
+				float: left;
+				margin-left:5px ;
+				height: 36px;
+				line-height: 38px;
+				font: 12px/36px Arial,"Simsun";
+				color: #a5a5a5;
+				border: 1px solid  #ccc;
+				float: left;
+			}
+			/*立即注册div*/
+			#regNow{
+				height: 40px;
+				line-height: 40px;
+				width:288px ;
+				position: absolute;
+				left: 151px;
+				padding: 0px 4px;
+				font:16px/40px "Microsoft YaHei" ;
+				color:#fff ;
+				background-color:#ff5757 ; 
+				margin-top: 5px;
+    			text-align: center;
+    			float: left;
+			}
+			/*版权信息*/
+			#copyright{
+				margin: 0px auto;
+				width: 990px;
+				font: 12px/22px Arial,"Microsoft YaHei";
+			}
+			#copyright ul{
+				position: relative;
+				left: -40px;
+			}
+			#copyright li{
+				color: #5e5e5e;
+				list-style: none;
+				float: left;
+				padding-right: 13px;
+			}
+			#copyright li a{
+				color: #5e5e5e;
+				text-decoration: none;
+			}
+			#copyright a:hover{
+				color: red;
+				text-decoration: none;
+			}
+			#copyright p{
+				clear: both;
+				color: gray;
+				margin: 0px;
+			}
+			#copyright>p>a{
+				color: gray;
+			}
+			p>a:hover{
+				color: red;
+				text-decoration: none;
+			}
+			
+			#oredit{
+				padding-bottom: 10px;
+				margin: 10px;
+				width: 990px;
+				border-top: 1px solid #ccc;
+				position: absolute;
+				right: 0px;
+				font:12px/18px;
+				color: gray;
+			}
+			#oredit>a{
+				text-decoration: none;
+				color: gray;
+			}
+			
+			#oredit i{
+				display:block;
+				float: left;
+				position: absolute;
+				top: 15px;
+				
+				width: 35px;
+				height: 35px;
+			}
+			#oredit b{
+				display:block;
+				float: left;
+				width: 65px;
+				height: 35px;
+				position: absolute;
+				top: 15px;
+				
+			}
+			#baxx i{
+				background: url(img/1.5.png);
+			}
+			#baxx b{
+				left: 35px;
+			}
+			#xypj i{
+				background: url(img/1.6.png);
+				left:125px;
+			}
+			#xypj b{
+				width: 55px;
+				left: 165px;
+			}
+			#cxwz i{
+				background: url(img/1.7.png);
+				left:250px;
+			}
+			#cxwz b{
+				left:290px;
+				top:22px;
+			}
+			#wljc i{
+				background: url(img/1.8.png);
+				left:375px;
+			}
+			#wljc b{
+				width: 55px;
+				left: 415px;
+			}
+			#wgdjp i{
+				background: url(img/1.9.png);
+				left:500px;
+			}
+			#wgdjp b{
+				
+				left: 540px;
+			}
+			#jbzx i{
+				background: url(img/1.1.png);
+				left:625px;
+			}
+			#jbzx b{
+				width: 108px;
+				left:665px;
+			}
+			#name_yanzheng{
+				display: none;
+			}
+			#password_yanzheng{
+				display: none;
+			}
+			#phonenumber_yanzheng{
+				display: none;
+			}
+			#surepassword_yanzheng{
+				display: none;
+			}
+			#phone_yanzheng{
+				display: none;
+			}
+			#tuijian_yanzheng{
+				display: none;
+			}
+			#usernameDiv,#passwordDiv,#confirmPassDiv,#phoneNumberDiv,#referralCodediv{
+				position: relative;
+			}
+			#duihao{
+				display: none;
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				width: 17px;
+				height: 17px;
+				background: url(zcimg/register.png) no-repeat 0 -20px;
+				overflow: hidden;
+			}
+			#safe{
+				display: none;
+				position: absolute;
+				left: 10px;
+				bottom: -20px;
+			}
+			.txt{
+				float: left;
+				width: 90px;
+				text-align: right;
+				line-height: 14px;
+				color: #5e5e5e;
+				font: 12px/1.5 Arial,simsun;
+			}
+			.chengdu{
+				width: 123px;
+				height: 14px;
+				float: left;
+				padding-top: 2px;
+			}
+			.chengdu span{
+				font: 12px/1.5 Arial,simsun;
+				float: left;
+				width: 40px;
+				height: 14px;
+				line-height: 14px;
+				text-align: center;
+				background-color: #A5A5A5;
+				border-left: 1px solid #fff;
+				color: #fff;
+			}
+			
+		</style>
+		
+		<!--<script type="text/javascript">
+			
+			window.onload=function(){
+				//给用户名添加check
+				var username = document.getElementById("username");
+				username.onblur=usernameCheckB;
+				username.onkeyup=usernameCheckK;
+			
+			}
+			//非空
+			function trim (txt) {
+				var afterText = txt.replace(/^\s*/,"").replace(/\s*$/,"");
+				return afterText;
+			}
+//			用户名Check
+			function usernameCheckK () {
+				var div = document.getElementById("usernameDiv").nextSibling.nextSibling;
+				div.innerHTML="4-20个字符，支持汉字、字母、数字及"-"、"_"组合";
+			}
+			function usernameCheckB () {
+				var username = document.getElementById("username").value;
+				var div = document.getElementById("usernameDiv").nextSibling.nextSibling;
+
+				//不为空
+				if(trim(username)==""){
+					div.innerHTML="<font color='#FF0000'>请输入用户名</font>";
+					div.addClassName="error"
+				}
+			}
+			
+		</script>-->
+	</head>
+	<body>
+		<!--总页面-->
+		<div id="all">
+			<!--顶部-->
+			<div id="top">
+				<a href="http://www.gome.com.cn/">
+					<img src="img/registerlogo.png"/>
+				</a>
+				
+			</div>
+			<!--中间部分-->
+			<div id="main">
+				<div id="form-top">
+					<p>
+						我已注册，现在就
+						<a href="https://login.gome.com.cn/login">登录</a>
+					</p>
+				</div>
+				<!--表单-->
+				<div id="form-list">
+					<form id="form" action="UserServlet?action=add" method="post">
+						<input type="hidden" name="action" value="add">			
+						<!--用户名-->
+						<div class="same">
+							<div class="reg-lable">
+								<label for="username">用户名：</label>
+							</div>
+							<div class="inputDiv" id="usernameDiv">
+								<input type="text" class="i-text" name="username" id="username" autocomplete="off"/>
+								<span id="duihao"></span>
+							</div>
+							<div class="hint" id="name_yanzheng"><!--提示信息-->
+								
+							</div>
+							
+						</div>
+						<!--设置密码-->
+						<div class="same">
+							<div class="reg-lable">
+								<label for="password">设置密码：</label>
+							</div>
+							<div class="inputDiv" id="passwordDiv">
+								<input type="password" class="i-text" name="password" id="password" value="" autocomplete="off"/>
+								<span id="duihao"></span>
+								<div id="safe">
+									<span class="txt">安全程度：</span>
+									<div class="chengdu">
+										<span style="background-color: #CC0000;">弱</span>
+										<span id="zhong">中</span>
+										<span id="gao">强</span>
+									</div>
+								</div>
+							</div>
+							<div class="hint" id="password_yanzheng"><!--提示信息-->
+								
+							</div>
+							
+						</div>
+						<!--确认密码-->
+						<div class="same">
+							<div class="reg-lable">
+								<label for="confirmPass">确认密码：</label>
+							</div>
+							<div class="inputDiv" id="confirmPassDiv" >
+								<input type="password" class="i-text" name="confirmPass" id="confirmPass" value="" autocomplete="off"/>
+								<span id="duihao"></span>
+							</div>
+							<div class="hint" id="surepassword_yanzheng"><!--提示信息-->
+								
+							</div>
+							
+							
+						</div>
+						<!--邮箱-->
+						<div class="same">
+							<div class="reg-lable">
+								<label for="emailNumber">电子邮箱：</label>
+							</div>
+							<div class="inputDiv" id="emailNumberDiv">
+								<input type="text" class="i-text" name="email" id="email" value="" autocomplete="off"/>
+								<span id="duihao"></span>
+							</div>
+							<div class="hint" id="emailNumberDiv_yanzheng" style="display: none;"><!--提示信息-->
+								
+							</div>
+							
+						</div>
+						
+						<!--滑动验证-->
+						<div class="same">
+							<div class="reg-lable">
+								<label for="slidConfirm">随机验证：</label>
+							</div>
+							<div class="inputDiv" style="width: 140px;">
+								<input style="width: 140px;" type="text" class="i-text" id="slidConfirm" value="" autocomplete="off"/>
+							</div>
+							<div class="inputDiv1" style="width: 120px; float: left;" >
+								<input disabled="disabled" style="width: 120px; margin-left: 30px;" type="text" class="i-text" id="slidConfirm1" value="" autocomplete="off"/>
+							</div>
+							
+							
+						</div>
+						
+					
+						<!--手机号码-->
+						<div class="same">
+							<div class="reg-lable">
+								<label for="phoneNumber">手机号码：</label>
+							</div>
+							<div class="inputDiv" id="phoneNumberDiv">
+								<input type="hidden" name="action" value="send">
+								<input type="text" class="i-text" name="phoneNumber" id="phoneNumber" value="" autocomplete="off"/>
+								<span id="duihao"></span>
+							</div>
+							<div class="hint" id="phonenumber_yanzheng"><!--提示信息-->
+								
+							</div>
+							
+						</div>
+						
+						
+						
+						<!--短信验证码-->
+						<div id="msgCode"class="same">
+							<div class="reg-lable">
+								<label for="writeMsg">短信验证码：</label>
+							</div>
+							<div >
+								<input id="writeMsg" type="text" name="smsCode"  value="" autocomplete="off" onblur="checkNumber()" />
+							</div>
+							<div id="send" class="btn btn-success btn-xs" disabled="disabled" style="margin-top: 8px; margin-left: 5px;">
+								获取短信验证码
+							</div>
+							<div class="hint" id="phone_yanzheng"><!--提示信息-->
+								请输入短信验证码
+							</div>
+						
+						</div>
+						
+						<!--推荐码-->
+						<div class="same">
+							<div class="reg-lable">
+								<label for="referralCode">推荐码(选填)：</label>
+							</div>
+							<div class="inputDiv" id="referralCodediv">
+								<input type="text" class="i-text" id="referralCode" placeholder="填写推荐人 推荐码 帮好友赚收入" autocomplete="off"/>
+								<span id="duihao"></span>
+							</div>
+							<div class="hint" id="tuijian_yanzheng"><!--提示信息-->
+								
+							</div>
+						
+						</div>
+						
+						
+						<!--立即注册div-->
+						<input id="regNow" disabled="disabled" type="submit" value="立即注册"/>
+						
+					</form>
+				</div>
+			</div>
+			<!--版权信息部分-->
+			<div id="copyright">
+				<ul>
+					<li><a target="_blank" href="http://igome.com" >国美集团</a></li>
+					<li><a target="_blank" href="http://www.gomegj.com" >国美管家</a></li>
+					<li><a target="_blank" href="http://help.gome.com.cn/about/company.html" >关于国美</a></li>
+					<li><a target="_blank" href="http://zp.gome.com.cn" >加入我们</a></li>
+					<li>|</li>
+					<li><a target="_blank" href="//brand.gome.com.cn/" >品牌大全</a></li>
+					<li><a target="_blank" href="http://www.gome.com.cn/topic/" >商品专题</a></li>
+					<li><a target="_blank" href="http://www.gome.com.cn/pifa/" >批发大全</a></li>
+					<li><a target="_blank" href="http://www.gome.com.cn/hotwords/" >热词搜索</a></li>
+					<li><a target="_blank" href="http://www.gome.com.cn/links/" >友情链接</a></li>
+					<li id="fengxian"><a target="_blank" href="http://news.gome.com.cn/4-8ef49f4b-1-8.html/" >风险监测</a></li>
+					<li>|</li>
+					<li><a target="_blank" href="http://cps.gome.com.cn/" >销售联盟</a></li>
+					<li><a target="_blank" href="http://www.gome.com.cn/join/" >商家入驻</a></li>
+				</ul>
+				<p>
+					本公司游戏产品适合18岁以上成年人使用  违法和不良信息举报电话：021-60766055
+					<a href="http://gfs13.gomein.net.cn/T1cPYvBmYT1RCvBVdK.jpg">互联网药品信息服务资格证编号（京）-经营性-2013-0011</a>
+				</p>
+				<p>
+					国美在线电子商务有限公司  办公地址:上海市嘉定区沪宜公路3163-3199号一楼A区  客服电话:4008708708
+				</p>
+				<p>
+					©2000-2017  国美在线电子商务有限公司版权所有  京公安网备11010502027062  沪ICP备11009419号  沪B2-20120004号
+				</p>
+				<div id="oredit">
+					<a id="baxx" target="_blank" href="//www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=dov73ne26zbqpugb8ivnfez35upwknav4n">
+							
+						<i></i>
+						<b>经营性网站备案信息</b>
+					</a>
+					<a id="xypj" target="_blank" href="https://ss.knet.cn/verifyseal.dll?sn=2011071100100011373&comefrom=trust">
+							
+						<i></i>
+						<b>可信网站信用评价</b>
+					</a>
+					<a id="cxwz" target="_blank" href="http://search.cxwz.org/cert/l/CX20111018000607000618">
+							
+						<i></i>
+						<b>诚信网站</b>
+					</a>
+					<a id="wljc" target="_blank" href="http://www.bj.cyberpolice.cn/index.do">
+							
+						<i></i>
+						<b>朝阳网络警察</b>
+					</a>
+					<a id="wgdjp" target="_blank" href="http://shwg.dianping.com/index.html">
+							
+						<i></i>
+						<b>网购大家评</b>
+					</a>
+					<a id="jbzx" target="_blank" href="http://www.shjbzx.cn/">
+							
+						<i></i>
+						<b>上海市互联网违法和不良信息举报中心</b>
+					</a>
+					
+				</div>
+					
+			</div>
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-2.1.4.js" charset="utf-8"></script>
+	<script src="css/bootstrap/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	<script src="css/jQuery-confirm/jquery-confirm.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#send").click(function(){
+				var n = $("#phoneNumber").val();
+				if(n != ""){
+					$.post("SendServlet",{"action":"send","n":n}, function(){	
+						alert("验证码已经发送成功，十分钟内有效");
+					});
+				}else{
+					alert("手机号不能为空");
+				}
+			});
+			
+			$("#username").blur(function(){
+				var n = $(this).val();
+				if(n != ""){
+					$.post("UserServlet",{"action":"username","username1":n}, function(date){	
+						alert(date);
+					},"json");
+				}else{
+					alert("请输入用户名");
+				}
+			});
+			
+			$("#slidConfirm").focus(function(){
+				
+				//var a = Math.ceil(Math.random()*(9999-1000+1)+1000);
+				$("#slidConfirm1").val(Math.ceil(Math.random()*(9999-1000+1)+1000));
+				
+			});
+			
+			$("#slidConfirm").blur(function(){
+				var slidConfirm = $(this).val();
+				var slidConfirm1 = $("#slidConfirm1").val();
+				if(slidConfirm != slidConfirm1){
+					alert("随机验证码不正确");
+				}
+			});
+			
+			$("#password").blur(function(){
+				if($("#password_yanzheng").is(":visible") || $("#password").val() == ""){
+					//alert("密码错误");
+				}
+			});
+			
+			$("#confirmPass").blur(function(){
+				if($("#surepassword_yanzheng").is(":visible") || $("#confirmPass").val() == ""){
+					//alert("确定密码不正确");
+				}
+			});
+			
+			$("#email").blur(function(){
+				if($("#emailNumberDiv_yanzheng").is(":visible") || $("#email").val() == ""){
+					//alert("电子邮箱不正确");
+				}else{
+					var email = $("#email").val();
+					var username = $("#username").val(); 
+					$.post("EasyServlet",{"action":"sendMail","email1":email,"username1":username});
+				}
+			});
+			
+			$("#phoneNumber").blur(function(){
+				if($("#phonenumber_yanzheng").is(":visible") || $("#phoneNumber").val() == ""){
+					//alert("手机号不正确");
+				}
+			});
+			
+			$("#phoneNumber").blur(function(){
+				if($("#phonenumber_yanzheng").is(":visible") || $("#phoneNumber").val() == ""){
+					
+				}else{
+					$("#send").removeAttr("disabled");
+					
+				}
+			});	
+			
+			
+			$("#referralCode").blur(function(){
+				
+				if($("#phonenumber_yanzheng").is(":visible") || $("#phoneNumber").val() == "" || $("#writeMsg").val() == "" || $("#phone_yanzheng").is(":visible")){
+				
+				}else{
+					$('#regNow').removeAttr('disabled');
+				}
+			});
+
+		});
+		function checkNumber(){
+			var smsCode = $("#writeMsg").val();
+			$.post('SendServlet',{'action':'judge',"smsCode1":smsCode},function(data){
+				if(!data){
+					alert("验证码错误");
+				}
+			},'json');
+		}
+	</script>
+</html>
+

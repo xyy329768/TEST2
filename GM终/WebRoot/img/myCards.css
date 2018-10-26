@@ -1,0 +1,24 @@
+#mycards .platform-box{ padding: 4px 13px 4px 50px;margin-bottom:30px;}
+.pr_pay{display:block;} 
+#mycards .fqfk-fqs {clear: both; padding-left:48px;margin-top:-10px;*margin-top:-20px;color: #5e5e5e;}
+#mycards .fqfk-fqs-deatil {padding:8px 0 25px;}
+#myb_password .pay-pswd,#myb-gotopay,#mycards_pay_checkway{margin-left:48px;}
+#mycards .pay_checkway2 {margin:0px 0 0 48px;}
+#getCheckNum-mycards .fqfk-telcheck{
+  margin-top: 0;
+  margin-bottom: 15px
+}
+#myb_password_text{*margin-left:-48px;}
+#mycards .alert-box{  position: absolute;top:0;left:50%; margin:156px 0 0 -275px; width:460px;background:#fff;box-shadow: 0 0 10px #666;z-index: 50;}
+#mycards .xuan_check1{width: 642px;margin: -37px 0px 0px 76px;background: #fff;z-index: 2;}
+#mycards .code_swap {margin-top: 5px;}
+#mycards .platform-title {height: 34px;line-height: 50px;}
+#mycards .pay_checkway_zl {margin: 15px 0 0 50px;}
+.quike_way_label{border-radius:2px;display:inline-block; vertical-align: middle; height:18px; line-height:18px;padding:0 5px;background:#ff7f00;color: #fff;font-size: 12px;margin-left:1px;}
+
+.myb-prompt{
+position: absolute;
+top: 14px;
+left: 10px;
+color: #a5a5a5;
+}

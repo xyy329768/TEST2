@@ -1,0 +1,547 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #FFF;
+	color: #A5A5A5;
+	font: 12px/1.5 Arial,simsun;
+	text-align: left;
+}
+#gome-head{
+	position: relative;
+	width: 990px;
+	height: 120px;
+	vertical-align: middle;
+	margin: 0 auto;
+}
+#logo{
+	margin: 18px 40px 0 0;
+	float: left;
+}
+#logo a{
+	display: block;
+	background: url(../img/login/loginlogo.png) no-repeat;
+	width: 300px;
+	height: 62px;
+	margin-top: 13px;
+}
+.survey{
+	height: 16px;
+	width: 137px;
+	position: absolute;
+	bottom: 10px;
+	right: 0px;
+}
+.survey i{
+	display: inline-block;
+	margin-right: 8px;
+	padding-bottom: 2px;
+	width: 15px;
+	height: 16px;
+	background: url(../img/login/login-bg-common.png) 0 -257px no-repeat;
+	vertical-align: middle;
+}
+.survey a{
+	text-decoration: none;
+	cursor: pointer;
+	color: #888888;
+}
+.survey a:hover, .qrcode-desc a:hover, .registerBtn:hover, .corp-login .play_icon a:hover{
+	color: #D7000F;
+	text-decoration: underline;
+}
+.safeTipDiv{
+	background-color: #fff4e3;
+	border-top: 1px solid #fee6bc;	
+}
+.safeTipDiv p.safeTip{
+	width: 828px;
+	height: 29px;
+	padding-left: 10px;
+	margin: 0 auto;
+	background-color: #fff4e3;
+	color: #ff7f23;
+	font: 400 12px/29px "Microsoft Yahei";
+}
+.safeTipDiv .safeTip em{
+	background: url(../img/login/login-bg-common.png) no-repeat;
+	background-position: -28px 0;
+	display: block;
+	float: left;
+	width: 16px;
+	height: 16px;
+	margin: 8px 5px 0 0;
+}
+.content-bg{
+	width: 100%;
+	height: 480px;
+	background: #f91958;
+}
+.clearfix{
+	width: 1200px;
+	height: 480px;
+	margin: 0 auto;
+	background-position: top center;
+	background-image: url(../img/login/T1OgbvBCDj1RCvBVdK.jpg);
+}
+.login-box-wrap {
+    width: 350px;
+    float: right;
+    margin-top: 24px;
+    margin-right: 108px;
+    position: relative;
+    background: #fff;
+    overflow: visible;
+}
+.login-box-wrap1{
+	position: fixed;
+	width: 350px;
+	left: 50%;
+	margin-left: -195px;
+	box-shadow: 0 0 20px rgba(0,0,0,.19);
+	margin-right: 0px;
+	margin-top: 100px;
+}
+.loginBoxICon {
+    background-color: #f5f5f5;
+    padding: 0 10px 0 14px;
+    font: 400 14px/32px "Microsoft Yahei";
+    color: #888;
+    height: 32px;
+}
+.loginBoxICon .f1{
+	float: left;
+}
+.loginBoxClose{
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	z-index: 3;
+	top: 10px;
+	right: 14px;
+	overflow: hidden;
+	background: url(../img/login/spr-icon.png) -20px -90px no-repeat;
+}
+.loginHead{
+	width: 350px;
+	height: 54px;
+	border-bottom: 1px solid #f4f4f4;
+	position: relative;
+}
+.loginHead .tabLeft{
+	width: 174px;
+	height: 55px;
+	float: left;
+}
+.loginHead .tabRight{
+	width: 175px;
+	height: 55px;
+	float: right;
+}
+.loginHead .tabLeft a.cur{
+	font: 500 18px "Microsoft Yahei";
+	text-align: center;
+    height: 18px;
+	position: absolute;
+	left: 0;
+	width: 174px;
+	text-decoration: none;
+	top: 16px;
+	border-right: 1px solid #f4f4f4;
+}
+.cur-1{
+	color: #e3101e;
+}
+.loginHead .tabRight a.cur1{
+	font: 500 18px "Microsoft Yahei";
+	text-align: center;
+	height: 18px;
+	position: absolute;
+	right: 0;
+	width: 175px;
+	text-decoration: none;
+	top: 16px;
+}
+.cur-2{
+	color: #5e5e5e;
+}
+.loginBox {
+    min-height: 241px;
+    padding: 25px 11px 0 19px;
+}
+.loginBox .sm-login-box{
+	width: 320px;
+	height: 241px;
+	color: #888;
+	position: relative;
+}
+.loginBox .sm-login-box .qrcode-main{
+	position: relative;
+	width: 320px;
+	height: 165px;
+}
+.qrcode-main img#image1{
+	float: left;
+	position: absolute;
+	left: 75px;
+	border: 1px solid #e6e6e6;
+}
+.qrcode-main img#image2{
+	float: right;
+	width: 137px;
+	height: 173px;
+	display: none;
+	margin-left: 10px;
+	margin-top: -8px;
+}
+.qrcode-desc {
+    padding: 17px 0 0;
+    font-family: "微软雅黑";
+    color: #5e5e5e;
+	font-size: 12px;
+	text-align: center;
+	line-height: 14px;
+}
+.qrcode-desc a{
+	text-decoration: none;
+	color: #ff5757;
+}
+.smCode {
+    font-family: "微软雅黑";
+    color: #5e5e5e;
+    font-size: 12px;
+    text-align: center;
+    line-height: 14px;
+    margin-top: 4px;
+}
+.registerBtn{
+	position: absolute;
+	bottom: 10px;
+	right: 14px;
+	width: 50px;
+	height: 18px;
+	color: #069;
+	text-decoration: none;
+}
+.corp-login {
+    overflow: hidden;
+    clear: both;
+    background-color: #fcfcfc;
+    padding: 9px 20px;
+    color: #a5a5a5;
+    position: relative;
+    border: 1px solid #f0f0f0;
+}
+.play_icon{
+	width: 300px;
+}
+.corp-login .play_icon a{
+	float: left;
+	white-space: nowrap;
+	cursor: pointer;
+	color: #5e5e5e;
+	padding: 0 8px;
+	margin: 6px 0;
+	text-decoration: none;
+}
+.borderLine{
+	border-right: 1px solid #e6e6e6;
+}
+.corp-login a.more {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    padding: 0;
+    margin: 0;
+    top: 14px;
+    right: 20px;
+    background: url(../img/login/login-bg-common.png) 0px 0px no-repeat;
+}
+.corp-login a.active{
+	position: absolute;
+    width: 19px;
+    height: 19px;
+    padding: 0;
+    margin: 0;
+    top: 14px;
+    right: 20px;
+    background: url(../img/login/login-bg-common.png) 0px -25px no-repeat;
+}
+.login-wrap {
+    width: 300px;
+    position: relative;
+    padding: 5px 10px 0;
+}
+.tips {
+    width: 288px;
+    height: 22px;
+    line-height: 22px;
+    font-family: simsun;
+    position: absolute;
+    top: -21px;
+    left: 11px;
+    background: #ffeede;
+	color: #ff8001;
+}
+.tips em {
+    width: 14px;
+    height: 14px;
+    overflow: hidden;
+    float: left;
+    margin: 4px 5px 0 10px;
+    display: inline-block;
+    background: url(../img/login/spr-icon.png) -41px -54px no-repeat;
+}
+.login-item{
+	position: relative;
+	height: 52px;
+}
+.login-item .default{
+    position: absolute;
+    left: 12px;
+    top: 11px;
+    color: #A5A5A5;
+    font-size: 14px;
+    z-index: 1;
+    display: block;
+}
+.login-item .default em {
+    font-family: "Microsoft Yahei";
+    font-style: normal;
+}
+.txt {
+    position: relative;
+    padding: 8px 10px 7px;
+    width: 268px;
+    height: 25px;
+    background: url(../img/login/capital-tip-common.png) no-repeat -500px 0 transparent;
+    border: 1px solid #CCC;
+    font-family: Arial,simsun;
+    outline: 0 none;
+    color: #333;
+    font-size: 14px;
+    line-height: 21px;
+    z-index: 2;
+}
+.remember {
+	width: 300px;
+	height: 18px;
+    padding: 10px 0 12px;
+}
+.remember1{
+	height: 13px;
+}
+.f1{
+    float: left;
+}
+.remember input{
+    float: left;
+    margin-right: 4px;
+    margin-top: 3px;
+}
+.remember label {
+    color: #5e5e5e;
+}
+.f2{
+	float: right;
+}
+.f2 a.f2-1{
+	color: #5e5e5e;
+	text-decoration: none;
+	cursor: pointer;
+}
+.f2 a.f2-1:hover{
+	color: #D7000F;
+	text-decoration: underline;
+}
+.displayb{
+	color: #ccc;
+	padding: 0 10px;
+}
+.f2-2{
+	color: #2875cc;
+	text-decoration: none;
+	cursor: pointer;
+}
+.f2-2:hover{
+	text-decoration: underline;
+}
+.actions {
+    letter-spacing: 10px;
+}
+.btnnuw {
+    display: block;
+    width: 290px;
+    height: 42px;
+    background: #ff5757;
+    font: 500 18px/41px "Microsoft Yahei";
+    color: #fff;
+    text-align: center;
+    border: 0 none;
+    outline: 0;
+    word-spacing: 3px;
+    cursor: pointer;
+}
+.login-wrap {
+    width: 300px;
+    position: relative;
+    padding: 5px 10px 0;
+}
+.err-tip {
+    width: 288px;
+    height: 22px;
+    line-height: 22px;
+    background: #fee;
+    color: #e3111e;
+    font-family: simsun;
+    position: absolute;
+    top: -21px;
+    left: 11px;
+    z-index: 3;
+}
+.err-tip span.icon {
+    width: 14px;
+    height: 14px;
+    overflow: hidden;
+    float: left;
+    margin: 4px 5px 0 10px;
+    display: inline-block;
+    background: url(../img/login/spr-icon.png) -41px -54px;
+}
+.w138 {
+    width: 138px;
+    float: left;
+}
+.quickenLogin{
+	position: relative;
+}
+.check {
+    height: 38px;
+    width: 120px;
+    vertical-align: top;
+    position: absolute;
+    top: 52px;
+    left: 170px;
+}
+.check-phone {
+	padding: 2px 5px;
+    display: inline-block;
+    width: 108px;
+    height: 36px;
+    background: #F8F8F8;
+    border: 1px solid #ddd;
+    font: 400 12px/36px Simsun;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+}
+.detailContent {
+    font: 400 12px/16px "微软雅黑";
+    color: #999;
+    margin-bottom: 10px;
+}
+.fontBlink{
+    color: #2875cc;
+    text-decoration: none;
+}
+.fontBlink:hover{
+	text-decoration: underline;
+}
+
+
+
+#gome-foot, #gome-foot-box{
+	margin-top: 20px;
+    border: none;
+    background: #fff;
+}
+#gome-foot-box {
+	width: 990px;
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 0 0;
+}
+#gome-foot-box ul{
+	list-style: none;
+}
+#gome-foot-box ul li{
+	float: left;
+	font: 12px/22px Arial,"Microsoft YaHei";
+	padding: 0 13px 0 0;
+	white-space: nowrap;
+}
+#gome-foot-box ul li a{
+	text-decoration: none;
+	color: #5E5E5E;
+}
+#gome-foot p a{
+	text-decoration: none;
+	color: #999999;
+}
+#gome-foot p a:hover,#gome-foot-box ul li a:hover{
+	color: #D7000F;
+}
+#gome-foot p {
+	float: left;
+    font: 12px/22px Arial;
+    color: #999;
+    white-space: pre;
+}
+.gome-foot-credit {
+	width: 990px;
+	float: left;
+    border-top: 1px solid #e6e6e6;
+    margin-top: 5px;
+    padding: 10px 0 25px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.gome-foot-credit {
+    border-top: 1px solid #e6e6e6;
+    margin-top: 5px;
+    padding: 10px 0 25px;
+    overflow: hidden;
+}
+.gome-foot-credit i{
+    display: block;
+    width: 35px;
+    height: 35px;
+    background: url(../img/login/ui.png) 0 -180px;
+    float: left;
+}
+.gome-foot-credit b{
+    width: 60px;
+}
+.gome-foot-credit b{
+    font: 12px/18px Arial,"Microsoft YaHei";
+    font-weight: 400;
+    display: block;
+    float: left;
+    color: #999;
+    padding: 0 30px 0 5px;
+}
+.gome-foot-credit .credit-xypj i{
+    background-position: -35px -180px;
+}
+.gome-foot-credit .credit-cxwz i{
+    background-position: -70px -180px;
+}
+.gome-foot-credit .credit-cxwz b{
+    padding-top: 9px;
+}
+.gome-foot-credit .credit-hdjc i{
+    background-position: -105px -180px;
+}
+.gome-foot-credit .credit-wgdj i{
+    background-position: -140px -180px;
+}
+.gome-foot-credit .credit-wgdj b{
+    padding-top: 9px;
+}
+.gome-foot-credit .credit-report i{
+    background-position: -175px -180px;
+}
+.gome-foot-credit .credit-report b{
+    width: 110px;
+}

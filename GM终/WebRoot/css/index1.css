@@ -1,0 +1,472 @@
+.showLi{
+	background-color: #999999; 
+	border-left: 1px solid #6e6568;
+}
+#myphotos-left{
+	width: 81px;
+	height: 80px;
+	z-index: 999px;
+	position: absolute;
+	top: 185px;
+	right: 0px;
+	cursor: pointer;
+}
+#myphotos-left span{
+	display: inline-block;
+	width: 40px;
+	height: 80px;
+	background-color: black;
+	opacity: 0.2;
+}
+#myphotos-left span.span-left{
+	float: left;
+}
+#myphotos-left span.span-right{
+	float: right;
+}
+#myphotos-left span b{
+	display: inline-block;
+	width: 40px;
+	height: 80px;
+}
+#myphotos-left span.span-left b{
+	background: url(../img/images/ui1.png) 0 -112px no-repeat;
+}
+#myphotos-left span.span-right b{
+	background: url(../img/images/ui1.png) -42px -112px no-repeat;
+}
+#myphotos-left span:hover{
+	background-color: black;
+	opacity: 0.4;
+}
+#myphotos-bottom{
+	width: 160px;
+	height: 5px;
+	position: absolute;
+	top: 425px;
+	left: 300px;
+	cursor: pointer;
+}
+#myphotos-bottom span{
+	display: inline-block;
+	width: 30px;
+	height: 5px;
+	margin-right: 10px;
+	background-color: black;
+	opacity: 0.4;
+	float: left;
+}
+#myphotos-bottom span#myphotos-bottom-span1{
+	background-color: #F5004B;
+	opacity: 1;
+}
+.p1{
+	display: none; 
+	z-index: 998; 
+	position: absolute; 
+	left: 200px; 
+	width: 999px; 
+	height: 448px; 
+	top: 0px;
+	border: 1px solid #6e6568; 
+	border-left: none; 
+	background-color: #F8F8F8;
+	cursor: pointer;
+}
+.p1 a:hover{
+	color: #D7000F;
+}
+.p1-1,.p7-p1{
+	display: none; 
+	z-index: 998; 
+	position: absolute; 
+	left: 200px; 
+	width: 999px; 
+	height: 487px; 
+	border: 1px solid #6e6568;
+	border-left: none;
+	background-color: #F8F8F8;
+	cursor: pointer;
+}
+.p1-10{
+	display: none; 
+	z-index: 998; 
+	position: absolute; 
+	left: 200px; 
+	width: 999px; 
+	height: 540px; 
+	border: 1px solid #6e6568;
+	border-left: none;
+	background-color: #F8F8F8;
+	cursor: pointer;
+}
+.p1-2{
+	width: 1000px;
+	height: 45px;
+	position: absolute;
+	bottom: -1px;
+	left: -1px;
+	border-left: 1px solid #6e6568;
+}
+.p1-2 div.p1-2-1{
+	width: 210px;
+	height: 40px;
+	background-color: white;
+	position: absolute;
+	bottom: 1px;
+	right: 1px;
+}
+.p10-1{
+	width: 1000px;
+	height: 110px;
+	position: absolute;
+	bottom: -1px;
+	left: -1px;
+	border-left: 1px solid #6e6568;
+}
+.p10-1-right{
+	width: 210px;
+	height: 110px;
+	background-color: white;
+	position: absolute;
+	bottom: 1px;
+	right: 1px;
+}
+.p7-1{
+	width: 395px;
+	height: 447px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.p7-2{
+	width: 395px;
+	height: 447px;
+	position: absolute;
+	top: 0px;
+	right: 210px;
+}
+.p7-1 i.p7-i1,.p7-2 i.p7-i1{
+	top: 60px;
+}
+.p7-1 i.p7-i2,.p7-2 i.p7-i2{
+	top: 140px;
+}
+.p7-2 i.p7-i3{
+	top: 180px;
+}
+.p7-1 i.p7-i3{
+	top: 220px;
+}
+.p7-2 i.p7-i4{
+	top: 260px;
+}
+.p7-1 i.p7-i4{
+	top: 300px;
+}
+.p7-1 i.p7-i5,.p7-2 i.p7-i5{
+	top: 340px;
+}
+.p7-2 i.p7-i6{
+	top: 420px;
+}
+.p1 .p2{
+	position: absolute;
+	right: 0px;
+	top: 0px; 
+	width: 210px; 
+	height: 447px;
+	background-color: white;
+}
+.p1 b{
+	background-color: #D7000F;
+	font-family: "微软雅黑";
+	color: white;
+	font-size: 12px;
+	position: relative;
+	left: 20px;
+	top: 20px;
+	padding: 2px 3px;
+	display: inline-block;
+	margin-right: 10px;
+}
+.p1 i{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	color: #333333;
+	display: inline-block;
+	position: absolute;
+	left: 20px;
+}
+.p1 i.i1{
+	top: 60px;
+}
+.p1 i.i2{
+	top: 100px;
+}
+.p1 i.i3,.p1 i.i2-1,.p1 i.p12-1{
+	top: 140px;
+}
+.p1 i.i4,.p1 i.p12-2{
+	top: 180px;
+}
+.p1 i.i5,.p1 i.i3-1,.p1 i.i4-1,.p1 i.p11-1{
+	top: 220px;
+}
+.p1 i.i6,.p1 i.i4-2,.p1 i.i5-1,.p1 i.p11-2{
+	top: 260px;
+}
+.p1 i.i7,.p1 i.p11-3{
+	top: 300px;
+}
+.p1 i.i8,.p1 i.p11-4{
+	top: 340px;
+}
+.p1 i.i9,.p1 i.p11-5,.p1 i.i6-3{
+	top: 380px;
+}
+.p1 i.i10{
+	top: 420px;
+}
+.p1 i.i11{
+	top: 460px;
+}
+.p1 i.i12{
+	top: 500px;
+}
+.p1 i.i6-2,.p1 i.i6-1,.p1 i.i5-2{
+	top: 340px;
+}
+.p1 span{
+	display: inline-block;
+	width: 700px;
+	height: 39px;
+	border-bottom: 1px solid #F1F1F1;
+	position: absolute;
+	left: 80px;
+}
+.p1 span.span3-1,.p1 span.span1-1,.p1 span.span2-1,.p1 span.span4-2,.p1 span.span5-1{
+	display: inline-block;
+	width: 700px;
+	height: 79px;
+	border-bottom: 1px solid #F1F1F1;
+	position: absolute;
+	left: 80px;
+}
+.p1 span.span1{
+	margin-top: 47px;
+}
+.p1 span.span2{
+	margin-top: 87px;
+}
+.p1 span.span3,.p1 span.span2-1,.p1 span.span12-1{
+	margin-top: 127px;
+}
+.p1 span.span4,.p1 span.span12-2{
+	margin-top: 167px;
+}
+.p1 span.span5,.p1 span.span4-1,.p1 span.span3-2,.p1 span.span11-1{
+	margin-top: 207px;
+}
+.p1 span.span6,.p1 span.span5-1,.p1 span.span4-2,.p1 span.span11-2{
+	margin-top: 247px;
+}
+.p1 span.span7,.p1 span.span6-1,.p1 span.span11-3{
+	margin-top: 287px;
+}
+.p1 span.span8,.p1 span.span11-4{
+	margin-top: 327px;
+}
+.p1 span.span9,.p1 span.span11-5{
+	margin-top: 367px;
+}
+.p1 span.span10{
+	margin-top: 407px;
+}
+.p1 span.span11{
+	margin-top: 447px;
+}
+.p1 span.span12{
+	margin-top: 487px;
+}
+.p1 span.span6-2,.p1 span.span5-2{
+	margin-top: 327px;
+}
+.p1 span.span6-3{
+	margin-top: 367px;
+}
+.p1 span a{
+	display: inline-block;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #888888;
+	line-height: 40px;
+	padding: 0px 10px 0px 5px;
+}
+.p3{
+	height: 229px;
+	width: 210px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	border-bottom: 1px solid #F1F1F1;
+}
+.p4{
+	width: 210px;
+	height: 180px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+.p3 p{
+	height: 57px;
+}
+.p3 p img{
+	margin: 11px 17px;
+}
+.p7-1 span,.p7-1 span.p7-s5,.p7-2 span.p7-s2{
+	display: inline-block;
+	width: 300px;
+	height: 39px;
+	border-bottom: 1px solid #F1F1F1;
+	position: absolute;
+	left: 90px;
+}
+.p7-1 span.p7-s2,.p7-1 span.p7-s3,.p7-1 span.p7-s4,.p7-1 span.p7-s6,.p7-2 span.p7-s1,.p7-2 span.p7-s3,.p7-2 span.p7-s4,.p7-2 span.p7-s5,.p7-2 span.p7-s6{
+	display: inline-block;
+	width: 300px;
+	height: 79px;
+	border-bottom: 1px solid #F1F1F1;
+	position: absolute;
+	left: 90px;
+}
+.p7-1 span.p7-s1,.p7-2 span.p7-s1{
+	margin-top: 47px;
+}
+.p7-1 span.p7-s3,.p7-2 span.p7-s2{
+	margin-top: 127px;
+}
+.p7-2 span.p7-s3{
+	margin-top: 167px;
+}
+.p7-1 span.p7-s4{
+	margin-top: 207px;
+}
+.p7-2 span.p7-s4{
+	margin-top: 247px;
+}
+.p7-1 span.p7-s5{
+	margin-top: 287px;
+}
+.p7-1 span.p7-s6,.p7-2 span.p7-s5{
+	margin-top: 327px;
+}
+.p7-2 span.p7-s6{
+	margin-top: 407px;
+}
+.p7-p13 span{
+	display: inline-block;
+	width: 300px;
+	height: 29px;
+	border-bottom: 1px solid #F1F1F1;
+	position: absolute;
+	left: 90px;
+}
+.p7-p13 span.p13-s1{
+	display: inline-block;
+	width: 300px;
+	height: 119px;
+	border-bottom: 1px solid #F1F1F1;
+	position: absolute;
+	left: 90px;
+}
+.p7-p13 span.p13-s2,.p7-p13 span.p13-s5,.p7-p13 span.p8-s1,.p7-p13 span.p8-s2,.p7-p13 span.p8-s3,.p7-p13 span.p8-s4,.p7-p13 span.p8-s5,.p7-p13 span.p8-s7,.p7-p13 span.p8-s9,.p7-p13 span.p8-s10,.p7-p13 span.p8-s11,.p7-p13 span.p8-s12{
+	display: inline-block;
+	width: 300px;
+	height: 59px;
+	border-bottom: 1px solid #F1F1F1;
+	position: absolute;
+	left: 90px;
+}
+.p7-p13 span.p13-s1,.p7-p13 span.p13-s6,.p7-p13 span.p8-s1{
+	margin-top: 52px;
+}
+.p7-p13 span.p13-s7{
+	margin-top: 82px;
+}
+.p7-p13 span.p13-s8,.p7-p13 span.p8-s2{
+	margin-top: 112px;
+}
+.p7-p13 span.p13-s9{
+	margin-top: 142px;
+}
+.p7-p13 span.p13-s2,.p7-p13 span.p13-s10,.p7-p13 span.p8-s3,.p7-p13 span.p8-s8{
+	margin-top: 172px;
+}
+.p7-p13 span.p13-s11,.p7-p13 span.p8-s9{
+	margin-top: 202px;
+}
+.p7-p13 span.p13-s3,.p7-p13 span.p8-s4{
+	margin-top: 232px;
+}
+.p7-p13 span.p13-s4,.p7-p13 span.p8-s10{
+	margin-top: 262px;
+}
+.p7-p13 span.p13-s5,.p7-p13 span.p8-s5{
+	margin-top: 292px;
+}
+.p7-p13 span.p8-s11{
+	margin-top: 322px;
+}
+.p7-p13 span.p8-s6{
+	margin-top: 352px;
+}
+.p7-p13 span.p8-s7,.p7-p13 span.p8-s12{
+	margin-top: 382px;
+}
+.p7-p13 span a{
+	display: inline-block;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #888888;
+	line-height: 30px;
+	padding: 0px 10px 0px 5px;
+}
+.p7-p13 i.p13-i1,.p7-p13 i.p13-i6,.p7-p13 i.p8-i1{
+	top: 60px;
+}
+.p7-p13 i.p13-i7{
+	top: 90px;
+}
+.p7-p13 i.p13-i8,.p7-p13 i.p8-i2{
+	top: 120px;
+}
+.p7-p13 i.p13-i9{
+	top: 150px;
+}
+.p7-p13 i.p13-i2,.p7-p13 i.p13-i10,.p7-p13 i.p8-i3,.p7-p13 i.p8-i8{
+	top: 180px;
+}
+.p7-p13 i.p13-i11,.p7-p13 i.p8-i9{
+	top: 210px;
+}
+.p7-p13 i.p13-i3,.p7-p13 i.p8-i4{
+	top: 240px;
+}
+.p7-p13 i.p13-i4,.p7-p13 i.p8-i10{
+	top: 270px;
+}
+.p7-p13 i.p13-i5,.p7-p13 i.p8-i5{
+	top: 300px;
+}
+.p7-p13 i.p8-i11{
+	top: 330px;
+}
+.p7-p13 i.p8-i6{
+	top: 360px;
+}
+.p7-p13 i.p8-i7,.p7-p13 i.p8-i12{
+	top: 390px;
+}

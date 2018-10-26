@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>JD</display-name>
+	
+	<welcome-file-list>
+		
+		<welcome-file>index.jsp</welcome-file>
+	
+	</welcome-file-list>
+	
+  <servlet> 
+    <servlet-name>CategoryServlet</servlet-name>
+    <servlet-class>com.servlet.CategoryServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>JDDispatcherServlet</servlet-name>
+    <servlet-class>com.servlet.JDDispatcherServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Category2Servlet</servlet-name>
+  	<servlet-class>com.servlet.Category2Servlet</servlet-class>
+  </servlet>
+  <servlet>
+  	
+  	<servlet-name>ProductServlet</servlet-name>
+  	<servlet-class>com.servlet.ProductServlet</servlet-class>
+  	  <init-param>
+    	<param-name>productImageUploadPath</param-name>
+    	<param-value>D:/workspace/GM1.0/WebRoot/img/productImage</param-value>
+    </init-param>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>User1Servlet</servlet-name>
+    <servlet-class>com.servlet.User1Servlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<display-name>UserProductServlet</display-name>
+  	<servlet-name>UserProductServlet</servlet-name>
+  	<servlet-class>com.servlet.UserProductServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>ShoppingCartServlet</display-name>
+  	<servlet-name>ShoppingCartServlet</servlet-name>
+  	<servlet-class>com.servlet.ShoppingCartServlet</servlet-class>
+  </servlet>
+  <servlet>
+ 
+  	<display-name>UserServlet</display-name>
+  	<servlet-name>UserServlet</servlet-name>
+  	<servlet-class>com.servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>OrderServlet</display-name>
+  	<servlet-name>OrderServlet</servlet-name>
+  	<servlet-class>com.servlet.OrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddressServlet</servlet-name>
+    <servlet-class>com.servlet.AddressServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PaymentServlet</servlet-name>
+    <servlet-class>com.servlet.PaymentServlet</servlet-class>
+  </servlet>
+ <servlet>
+    <servlet-name>SendServlet</servlet-name>
+    <servlet-class>com.servlet.SendServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EasyServlet</servlet-name>
+    <servlet-class>com.servlet.EasyServlet</servlet-class>
+  </servlet>
+   <servlet>
+    <servlet-name>myOrderServlet</servlet-name>
+    <servlet-class>com.servlet.myOrderServlet</servlet-class>
+  </servlet>
+  
+
+
+	<session-config> <session-timeout>1</session-timeout> </session-config>
+
+
+
+  <servlet-mapping> 
+    <servlet-name>CategoryServlet</servlet-name>
+    <url-pattern>/CategoryServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>JDDispatcherServlet</servlet-name>
+    <url-pattern>/JDDispatcherServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Category2Servlet</servlet-name>
+  	<url-pattern>/Category2Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ProductServlet</servlet-name>
+  	<url-pattern>/ProductServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>User1Servlet</servlet-name>
+    <url-pattern>/User1Servlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>UserProductServlet</servlet-name>
+  	<url-pattern>/UserProductServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ShoppingCartServlet</servlet-name>
+  	<url-pattern>/ShoppingCartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UserServlet</servlet-name>
+  	<url-pattern>/UserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>OrderServlet</servlet-name>
+  	<url-pattern>/OrderServlet</url-pattern>
+  </servlet-mapping>
+	 <servlet-mapping>
+    <servlet-name>AddressServlet</servlet-name>
+    <url-pattern>/AddressServlet</url-pattern>
+  </servlet-mapping>
+	  <servlet-mapping>
+    <servlet-name>PaymentServlet</servlet-name>
+    <url-pattern>/PaymentServlet</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>SendServlet</servlet-name>
+    <url-pattern>/SendServlet</url-pattern>   
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EasyServlet</servlet-name>
+    <url-pattern>/EasyServlet</url-pattern>
+  </servlet-mapping>    
+    <servlet-mapping>
+    <servlet-name>myOrderServlet</servlet-name>
+    <url-pattern>/myOrderServlet</url-pattern>
+  </servlet-mapping>
+	
+
+	
+   <filter>
+   	<filter-name>MyCharacterFilter</filter-name>
+   	<filter-class>com.filter.MyCharacterFilter</filter-class>
+   </filter>
+  
+   <filter-mapping>
+   	<filter-name>MyCharacterFilter</filter-name>
+   	<url-pattern>/*</url-pattern>
+   </filter-mapping>
+</web-app>
